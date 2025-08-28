@@ -1,0 +1,100 @@
+/* Minimal, clean styles for a resource page */
+:root{
+  --bg:#0b0c0f;
+  --panel:#14161b;
+  --text:#eaeef7;
+  --muted:#a7b0c4;
+  --accent:#6aa6ff;
+  --card:#191c22;
+  --ring:#2b303b;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height:1.6;
+}
+
+.container{
+  width:min(100%, 960px);
+  margin-inline:auto;
+  padding: 1rem;
+}
+
+.site-header{
+  background: linear-gradient(180deg, #0b0c0f, #0f1116);
+  border-bottom:1px solid var(--ring);
+  padding: 2.5rem 0 1.5rem;
+}
+.site-header h1{
+  margin:0 0 .25rem 0;
+  font-size: clamp(1.6rem, 3vw + 1rem, 2.5rem);
+}
+.tagline{margin:.25rem 0 1rem 0;color:var(--muted)}
+
+#search{
+  width:100%;
+  padding:.85rem 1rem;
+  border:1px solid var(--ring);
+  border-radius: .8rem;
+  background: var(--panel);
+  color: var(--text);
+  outline:none;
+}
+#search:focus{box-shadow:0 0 0 .2rem rgba(106,166,255,.25); border-color: var(--accent)}
+
+h2{margin-top:2rem; font-size:1.25rem}
+.cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+  gap: .9rem;
+  margin-top:.75rem;
+}
+.card{
+  display:block;
+  border:1px solid var(--ring);
+  background:var(--card);
+  border-radius:1rem;
+  padding:1rem;
+  text-decoration:none;
+  color:var(--text);
+  transition: transform .06s ease, border-color .15s ease;
+}
+.card:hover{transform: translateY(-2px); border-color: var(--accent)}
+.card h3{margin:.25rem 0 .35rem 0; font-size:1.05rem}
+.card p{margin:0;color:var(--muted)}
+
+details{
+  border:1px solid var(--ring);
+  background:var(--panel);
+  border-radius:.9rem;
+  padding:.6rem .9rem;
+  margin:.7rem 0;
+}
+details summary{cursor:pointer; font-weight:600}
+.resource-list{
+  list-style:none;
+  padding-left:0;
+  margin:.2rem 0 0 0;
+}
+.resource-list li{
+  padding:.4rem 0;
+  border-top:1px dashed var(--ring);
+}
+.resource-list li:first-child{border-top:none}
+.resource-list a{color:var(--accent); text-decoration:none}
+.resource-list a:hover{text-decoration:underline}
+
+.site-footer{
+  border-top:1px solid var(--ring);
+  margin-top:2rem;
+  padding:1.25rem 0;
+  color:var(--muted);
+  text-align:center;
+}
+
+/* Hidden state for search filtering */
+.hidden{display:none !important}

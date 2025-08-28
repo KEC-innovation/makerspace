@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resource Hub</title>
+  <meta name="description" content="A simple, fast resource page template for GitHub Pages." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Resource Hub</h1>
+      <p class="tagline">One place for links, docs, and how‑tos.</p>
+      <input id="search" type="search" placeholder="Search resources…" aria-label="Search resources" />
+    </div>
+  </header>
+
+  <main class="container">
+    <section aria-labelledby="quick-links-heading">
+      <h2 id="quick-links-heading">Quick Links</h2>
+      <div class="cards" id="quick-links">
+        <a href="#" class="card resource-item" data-tags="policy,guide,getting-started">
+          <h3>Getting Started</h3>
+          <p>New here? Start with the basics.</p>
+        </a>
+        <a href="#" class="card resource-item" data-tags="docs,howto,setup">
+          <h3>Setup Guide</h3>
+          <p>Install, access, and configure tools.</p>
+        </a>
+        <a href="#" class="card resource-item" data-tags="faq,help,support">
+          <h3>FAQ</h3>
+          <p>Answers to common questions.</p>
+        </a>
+        <a href="#" class="card resource-item" data-tags="safety,checklist,procedure">
+          <h3>Safety Checklist</h3>
+          <p>Do this before using equipment.</p>
+        </a>
+      </div>
+    </section>
+
+    <section aria-labelledby="categories-heading">
+      <h2 id="categories-heading">Categories</h2>
+      <details open>
+        <summary>Guides</summary>
+        <ul class="resource-list">
+          <li class="resource-item" data-tags="guide,howto,beginner"><a href="#">Beginner’s Guide</a></li>
+          <li class="resource-item" data-tags="guide,advanced"><a href="#">Advanced Techniques</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Documents</summary>
+        <ul class="resource-list">
+          <li class="resource-item" data-tags="docs,policy,template"><a href="#">Policy Template (PDF)</a></li>
+          <li class="resource-item" data-tags="docs,form"><a href="#">Request Form</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Tools</summary>
+        <ul class="resource-list">
+          <li class="resource-item" data-tags="tool,software"><a href="#">Software Downloads</a></li>
+          <li class="resource-item" data-tags="tool,webapp"><a href="#">Online Tools</a></li>
+        </ul>
+      </details>
+    </section>
+
+    <section aria-labelledby="all-resources-heading">
+      <h2 id="all-resources-heading">All Resources</h2>
+      <ul class="resource-list" id="all-resources">
+        <li class="resource-item" data-tags="policy,guide"><a href="#">Code of Conduct</a> — policy</li>
+        <li class="resource-item" data-tags="tutorial,video"><a href="#">Intro Video</a> — tutorial</li>
+        <li class="resource-item" data-tags="equipment,manual"><a href="#">Equipment Manual</a> — PDF</li>
+        <li class="resource-item" data-tags="contact,support"><a href="#">Support Contacts</a> — who to reach</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Resource Hub · Built for GitHub Pages</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
